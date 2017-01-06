@@ -22,14 +22,15 @@
 
 import asyncio
 
-from . import server_selector
+from . import server_selector, game_client
 
-async def main_loop(loop):
-    '''Main application loop'''
+async def main_routine(loop):
+    '''Main application routine'''
     address, port = await server_selector.select_server(loop)
-    print(address, port)
+    print(address + ":" + str(port))
+    await game_client.game_client_routine(loop, address, port)
 
 def main(args):
     '''Entry-point'''
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main_loop(loop))
+    loop.run_until_complete(main_routine(loop))

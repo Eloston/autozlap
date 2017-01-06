@@ -24,7 +24,7 @@ import time
 
 import aiohttp
 
-from .constants import Mode, VERSION
+from .constants import Mode, CLIENT_VERSION
 
 _SERVERS_URL = "http://zlap.io/servers.json?_={time}"
 
@@ -40,7 +40,7 @@ async def select_server(loop, mode=Mode.ffa, ignore_empty_servers=True):
     server_list = await _fetch_servers_json(loop)
     for server_sub_list in server_list:
         for server in server_sub_list:
-            if not server["version"] == VERSION:
+            if not server["version"] == CLIENT_VERSION:
                 raise Exception("Unsupported server version: " + server["version"])
             if not server["mode"] == mode.value:
                 continue
