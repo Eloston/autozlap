@@ -21,6 +21,8 @@
 
 '''Used when the application is invoked via `python -m`'''
 
+import sys
+
 from . import main
 
-main.main(list())
+main.main(sys.argv[1:])

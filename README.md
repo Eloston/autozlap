@@ -7,6 +7,7 @@ Right now, this is a personal project to learn about machine learning and Python
 
 * Python 3.5 minimum (will probably be 3.6 in the future)
 * [`aiohttp`](//aiohttp.readthedocs.io/en/stable/)
+* [`construct` (version >= 2.8)](//construct.readthedocs.io/)
 
 ## Usage
 
