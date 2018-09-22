@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # autozlap: An experimental autonomous zlap.io client
-# Copyright (C) 2017  Eloston
+# Copyright (C) 2018  Eloston
 #
 # This file is part of autozlap.
 #
