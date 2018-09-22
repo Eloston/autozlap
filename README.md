@@ -12,3 +12,7 @@ Right now, this is a personal project to learn about machine learning and Python
 ## Usage
 
 `python3 -m autozlap`
+
+## License
+
+See [LICENSE](LICENSE)
